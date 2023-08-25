@@ -43,7 +43,7 @@ export STEAM_GAMESCOPE_DYNAMIC_REFRESH_IN_STEAM_SUPPORTED=0
 # Color management support
 export STEAM_GAMESCOPE_COLOR_MANAGED=1
 
-export STEAM_GAMESCOPE_HDR_SUPPORTED=1
+export STEAM_GAMESCOPE_HDR_SUPPORTED=0
 
 # Workaround for steam getting killed immediatly during reboot
 export STEAMOS_STEAM_REBOOT_SENTINEL="/tmp/steamos-reboot-sentinel"
