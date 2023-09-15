@@ -129,3 +129,8 @@ fi
 if command -v steam-tweaks > /dev/null; then
     steam-tweaks > "${HOME}"/.steam-tweaks.log
 fi
+
+# Start discover-overlay if discord is installed
+if command -v bazzite-discover-overlay > /dev/null; then
+    env DISPLAY=:0 bazzite-discover-overlay 2>&1 &
+fi
