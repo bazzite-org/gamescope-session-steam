@@ -34,7 +34,16 @@ export STEAM_GAMESCOPE_HAS_TEARING_SUPPORT=1
 # Enable tearing controls in steam
 export STEAM_GAMESCOPE_TEARING_SUPPORTED=1
 
-export STEAM_GAMESCOPE_HDR_SUPPORTED=1
+# Enable VRR controls in steam
+export STEAM_GAMESCOPE_VRR_SUPPORTED=1
+
+# When set to 1, a toggle will show up in the steamui to control whether dynamic refresh rate is applied to the steamui
+export STEAM_GAMESCOPE_DYNAMIC_REFRESH_IN_STEAM_SUPPORTED=0
+
+# Color management support
+export STEAM_GAMESCOPE_COLOR_MANAGED=1
+
+export STEAM_GAMESCOPE_HDR_SUPPORTED=0
 
 # Workaround for steam getting killed immediatly during reboot
 export STEAMOS_STEAM_REBOOT_SENTINEL="/tmp/steamos-reboot-sentinel"
@@ -88,7 +97,9 @@ if [ -f "/usr/share/steamos/steamos.png" ] ; then
   export STEAM_UPDATEUI_PNG_BACKGROUND=/usr/share/steamos/steamos.png
 fi
 
-export CURSOR_FILE="${HOME}/.local/share/Steam/tenfoot/resource/images/cursors/arrow.png"
+# SteamOS cursor theme
+export XCURSOR_THEME=steam
+CURSOR_FILE="/usr/share/steamos/steamos-cursor.png"
 
 export CLIENTCMD="steam -gamepadui -steamos3 -steampal -steamdeck"
 
@@ -117,4 +128,9 @@ fi
 # Run steam-tweaks if exists
 if command -v steam-tweaks > /dev/null; then
     steam-tweaks > "${HOME}"/.steam-tweaks.log
+fi
+
+# Start discover-overlay if discord is installed
+if command -v bazzite-discover-overlay > /dev/null; then
+    env DISPLAY=:0 bazzite-discover-overlay 2>&1 &
 fi
