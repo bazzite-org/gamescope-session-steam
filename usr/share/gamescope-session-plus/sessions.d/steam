@@ -12,9 +12,6 @@ function short_session_recover {
     steamos-session-select desktop
 }
 
-# Show VRR controls in Steam
-export STEAM_GAMESCOPE_VRR_SUPPORTED=1
-
 # Enable Mangoapp
 export STEAM_MANGOAPP_PRESETS_SUPPORTED=1
 export STEAM_USE_MANGOAPP=1
