@@ -95,7 +95,7 @@ fi
 
 # SteamOS cursor theme
 export XCURSOR_THEME=steam
-export XCURSOR_SCALE=256
+CURSOR_FILE="/usr/share/steamos/steamos-cursor.png"
 
 export CLIENTCMD="steam -gamepadui -steamos3 -steampal -steamdeck"
 
