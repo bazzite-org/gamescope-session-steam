@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/bash
 
 function short_session_recover {
     mkdir -p ~/.local/share/Steam
