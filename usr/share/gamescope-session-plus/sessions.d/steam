@@ -73,6 +73,9 @@ export STEAM_GAMESCOPE_NIS_SUPPORTED=1
 # Let steam know it can unmount drives without superuser privileges
 export STEAM_ALLOW_DRIVE_UNMOUNT=1
 
+# Allow formatting external drives
+export STEAM_ALLOW_DRIVE_ADOPT=1
+
 # We no longer need to set GAMESCOPE_EXTERNAL_OVERLAY from steam, mangoapp now does it itself
 export STEAM_DISABLE_MANGOAPP_ATOM_WORKAROUND=1
 
