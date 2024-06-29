@@ -106,6 +106,14 @@ fi
 
 export CURSOR_FILE="${HOME}/.local/share/Steam/tenfoot/resource/images/cursors/arrow.png"
 
+export XCURSOR_THEME=steam
+export XCURSOR_SCALE=256
+
+if command -v kwriteconfig6 >/dev/null; then
+  # Chromium (and therefore Steam) ignore XCursor and use on the GTK config
+  kwriteconfig6 --file gtk-3.0/settings.ini  --group Settings --key gtk-cursor-theme-name steam
+fi
+
 export CLIENTCMD="steam -gamepadui -steamos3 -steampal -steamdeck"
 
 # Workaround for Steam login issue while Steam client change propagates out of Beta
