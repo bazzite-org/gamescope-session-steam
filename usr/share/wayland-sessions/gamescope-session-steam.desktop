@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Steam Big Picture
-Comment=Steam Big Picture session
+Name=Steam Gaming Mode
+Comment=A controller-friendly environment for gaming
 Exec=gamescope-session-plus steam
 Type=Application
 DesktopNames=gamescope
