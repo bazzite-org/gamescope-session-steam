@@ -1,18 +1,9 @@
 #!/usr/bin/bash
 
 function setup_custom_videos {
-    # Install Bazzite's Steam Game Mode Startup & Suspend Videos
-    mkdir -p $HOME/.local/share/Steam/config/uioverrides/movies
-    if [ ! -f $HOME/.local/share/Steam/config/uioverrides/movies/deck_startup.webm ]; then
-        cp /usr/share/ublue-os/bazzite/bazzite.webm $HOME/.local/share/Steam/config/uioverrides/movies/deck_startup.webm
-    fi
-
-    if [ ! -f $HOME/.local/share/Steam/config/uioverrides/movies/deck-suspend-animation.webm ]; then
-        cp /usr/share/ublue-os/bazzite/bazzite-suspend.webm $HOME/.local/share/Steam/config/uioverrides/movies/deck-suspend-animation.webm
-    fi
-
-    if [ ! -f $HOME/.local/share/Steam/config/uioverrides/movies/deck-suspend-animation-from-throbber.webm ]; then
-        cp /usr/share/ublue-os/bazzite/bazzite-suspend.webm $HOME/.local/share/Steam/config/uioverrides/movies/deck-suspend-animation-from-throbber.webm
+    # Apply our branding for Steam
+    if [[ -f /usr/bin/bazzite-steam-brand ]]; then
+        /usr/bin/bazzite-steam-brand
     fi
 }
 
